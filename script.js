@@ -17,3 +17,9 @@ overlay.addEventListener('click', function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 });
+document.addEventListener('keydown', function (e) {
+  if (e.key == 'Escape') {
+    if (!modal.classList.contains('hidden')) modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+  }
+});
